@@ -42,3 +42,12 @@ resource "azuread_group" "tm6_computadores_com_admin_local" {
   mail_enabled     = false
   owners           = [azuread_user.admintech_group_owner.object_id]
 }
+
+#Tm6-Upgrade-Windows-11
+resource "azuread_group" "tm6_upgrade_windows_11" {
+  display_name     = "Tm6-Upgrade-Windows-11"
+  description      = "Grupo atribuído de DISPOSITIVOS contendo os computadores que precisam ter seus sistemas operacionais Windows 10 atualizados para a versão 11."
+  security_enabled = true
+  mail_enabled     = false
+  owners           = [azuread_user.admintech_group_owner.object_id]
+}
